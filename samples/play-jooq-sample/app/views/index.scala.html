@@ -1,0 +1,21 @@
+@(tasks: List[models.task.Task])
+
+@main("Task list") {
+    
+    <h1>@tasks.size() task(s)</h1>
+
+    <ul>
+        @for(task <- tasks) {
+            <li>@task.label</li>
+        }
+    </ul>
+
+    <h2>Add a new Task</h2>
+    <form action="/task" method="POST">
+        <label>Label
+            <input type="text" name="label">
+        </label>
+        <input type="submit" value="create">
+    </form>
+    
+}
