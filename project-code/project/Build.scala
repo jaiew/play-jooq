@@ -12,9 +12,9 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
 
-    "org.jooq" % "jooq" % "3.0.1",
-    "org.jooq" % "jooq-meta" % "3.0.1",
-    "org.jooq" % "jooq-codegen" % "3.0.1"
+    "org.jooq" % "jooq" % "3.1.0",
+    "org.jooq" % "jooq-meta" % "3.1.0",
+    "org.jooq" % "jooq-codegen" % "3.1.0"
   )
 
 

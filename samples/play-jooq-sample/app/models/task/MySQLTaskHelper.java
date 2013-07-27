@@ -1,10 +1,10 @@
 package models.task;
 
+import models.PlayConnectionProvider;
 import models.generated.mysql.Tables;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
-import play.db.DB;
 
 import java.util.List;
 
@@ -24,10 +24,10 @@ public class MySQLTaskHelper implements TaskHelper {
 
     @Override
     public List<Task> getAll() {
-        return create().selectFrom(models.generated.mysql.Tables.TASK).fetch().into(Task.class);
+        return create().selectFrom(Tables.TASK).fetch().into(Task.class);
     }
 
     private DSLContext create() {
-        return DSL.using(DB.getConnection(), SQLDialect.MYSQL);
+        return DSL.using(new PlayConnectionProvider(), SQLDialect.MYSQL);
     }
 }

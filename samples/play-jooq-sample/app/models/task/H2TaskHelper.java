@@ -1,13 +1,12 @@
 
 package models.task;
 
+import models.PlayConnectionProvider;
 import models.generated.h2.Tables;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
-import play.db.DB;
 
-import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -30,7 +29,6 @@ public class H2TaskHelper implements TaskHelper {
     }
 
     private DSLContext create() {
-        Connection conn = DB.getConnection();
-        return DSL.using(conn, SQLDialect.H2);
+        return DSL.using(new PlayConnectionProvider(), SQLDialect.H2);
     }
 }

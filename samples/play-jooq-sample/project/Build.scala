@@ -17,9 +17,9 @@ object ApplicationBuild extends Build {
     "mysql" % "mysql-connector-java" % "5.1.18",
 
     "org.jooq" %% "play-jooq" % "1.0-SNAPSHOT",
-    "org.jooq" % "jooq" % "3.0.1",
-    "org.jooq" % "jooq-meta" % "3.0.1",
-    "org.jooq" % "jooq-codegen" % "3.0.1"
+    "org.jooq" % "jooq" % "3.1.0",
+    "org.jooq" % "jooq-meta" % "3.1.0",
+    "org.jooq" % "jooq-codegen" % "3.1.0"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
