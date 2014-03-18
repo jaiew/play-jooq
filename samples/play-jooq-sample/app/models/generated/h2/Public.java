@@ -11,7 +11,7 @@ package models.generated.h2;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Public extends org.jooq.impl.SchemaImpl {
 
-	private static final long serialVersionUID = 479972337;
+	private static final long serialVersionUID = -2024968228;
 
 	/**
 	 * The singleton instance of <code>PUBLIC</code>
@@ -34,7 +34,7 @@ public class Public extends org.jooq.impl.SchemaImpl {
 
 	private final java.util.List<org.jooq.Sequence<?>> getSequences0() {
 		return java.util.Arrays.<org.jooq.Sequence<?>>asList(
-			models.generated.h2.Sequences.SYSTEM_SEQUENCE_3EB1C337_6C6C_4449_9B97_4BEE4DA48A14);
+			models.generated.h2.Sequences.SYSTEM_SEQUENCE_E991C578_C08C_4456_AD73_26542D04AD39);
 	}
 
 	@Override

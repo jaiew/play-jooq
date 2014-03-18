@@ -14,7 +14,7 @@ package models.generated.h2;
 public class Sequences {
 
 	/**
-	 * The sequence <code>PUBLIC.SYSTEM_SEQUENCE_3EB1C337_6C6C_4449_9B97_4BEE4DA48A14</code>
+	 * The sequence <code>PUBLIC.SYSTEM_SEQUENCE_E991C578_C08C_4456_AD73_26542D04AD39</code>
 	 */
-	public static final org.jooq.Sequence<java.lang.Long> SYSTEM_SEQUENCE_3EB1C337_6C6C_4449_9B97_4BEE4DA48A14 = new org.jooq.impl.SequenceImpl<java.lang.Long>("SYSTEM_SEQUENCE_3EB1C337_6C6C_4449_9B97_4BEE4DA48A14", models.generated.h2.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT);
+	public static final org.jooq.Sequence<java.lang.Long> SYSTEM_SEQUENCE_E991C578_C08C_4456_AD73_26542D04AD39 = new org.jooq.impl.SequenceImpl<java.lang.Long>("SYSTEM_SEQUENCE_E991C578_C08C_4456_AD73_26542D04AD39", models.generated.h2.Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT);
 }

@@ -11,9 +11,9 @@ package models.generated.h2.tables.records;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @javax.persistence.Entity
 @javax.persistence.Table(name = "TASK", schema = "PUBLIC")
-public class TaskRecord extends org.jooq.impl.UpdatableRecordImpl<models.generated.h2.tables.records.TaskRecord> implements org.jooq.Record2<java.lang.Long, java.lang.String>, models.generated.h2.tables.interfaces.ITask {
+public class TaskRecord extends org.jooq.impl.UpdatableRecordImpl<models.generated.h2.tables.records.TaskRecord> implements org.jooq.Record2<java.lang.Long, java.lang.String> {
 
-	private static final long serialVersionUID = -1949103113;
+	private static final long serialVersionUID = 1449465457;
 
 	/**
 	 * Setter for <code>PUBLIC.TASK.ID</code>.
@@ -28,7 +28,6 @@ public class TaskRecord extends org.jooq.impl.UpdatableRecordImpl<models.generat
 	@javax.persistence.Id
 	@javax.persistence.Column(name = "ID", unique = true, nullable = false, precision = 19)
 	@javax.validation.constraints.NotNull
-	@Override
 	public java.lang.Long getId() {
 		return (java.lang.Long) getValue(0);
 	}
@@ -45,7 +44,6 @@ public class TaskRecord extends org.jooq.impl.UpdatableRecordImpl<models.generat
 	 */
 	@javax.persistence.Column(name = "LABEL", length = 255)
 	@javax.validation.constraints.Size(max = 255)
-	@Override
 	public java.lang.String getLabel() {
 		return (java.lang.String) getValue(1);
 	}
