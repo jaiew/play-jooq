@@ -69,6 +69,16 @@ class JooqPlugin(val app: Application) extends Plugin with HandleWebCommandSuppo
     }
   }
 
+  object JooqPlugin{
+     def generate(){
+       dbApi.datasources.foreach {
+         case (ds, db) => {
+           Logger.info("Generate JOOQ classes for: " + db)
+           executeGeneration(dbApi, db)
+         }
+     }
+  }
+}
   def executeGeneration(api: DBApi, db: String) = {
 
     val generationTool = new GenerationTool()
