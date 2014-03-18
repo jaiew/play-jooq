@@ -14,12 +14,12 @@ object ApplicationBuild extends Build {
     javaEbean,
 
     "com.google.inject" % "guice" % "3.0",
-    "mysql" % "mysql-connector-java" % "5.1.18",
+    "mysql" % "mysql-connector-java" % "5.1.29",
 
     "org.jooq" %% "play-jooq" % "1.0-SNAPSHOT",
-    "org.jooq" % "jooq" % "3.1.0",
-    "org.jooq" % "jooq-meta" % "3.1.0",
-    "org.jooq" % "jooq-codegen" % "3.1.0"
+    "org.jooq" % "jooq" % "3.3.1",
+    "org.jooq" % "jooq-meta" % "3.3.1",
+    "org.jooq" % "jooq-codegen" % "3.3.1"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(

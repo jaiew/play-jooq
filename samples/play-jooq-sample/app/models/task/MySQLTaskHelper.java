@@ -1,7 +1,6 @@
 package models.task;
 
 import models.PlayConnectionProvider;
-import models.generated.mysql.Tables;
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
@@ -15,16 +14,18 @@ public class MySQLTaskHelper implements TaskHelper {
 
     @Override
     public Task create(String label) {
-        return create().insertInto(Tables.TASK, Tables.TASK.LABEL)
-                .values(label)
-                .returning()
-                .fetchOne()
-                .into(Task.class);
+//        return create().insertInto(Tables.TASK, Tables.TASK.LABEL)
+//                .values(label)
+//                .returning()
+//                .fetchOne()
+//                .into(Task.class);
+        return null;
     }
 
     @Override
     public List<Task> getAll() {
-        return create().selectFrom(Tables.TASK).fetch().into(Task.class);
+//        return create().selectFrom(Tables.TASK).fetch().into(Task.class);
+        return null;
     }
 
     private DSLContext create() {
