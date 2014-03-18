@@ -11,7 +11,6 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     jdbc,
     anorm,
-
     "org.jooq" % "jooq" % "3.3.1",
     "org.jooq" % "jooq-meta" % "3.3.1",
     "org.jooq" % "jooq-codegen" % "3.3.1"
