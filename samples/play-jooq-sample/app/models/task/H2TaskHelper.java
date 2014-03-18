@@ -26,6 +26,7 @@ public class H2TaskHelper implements TaskHelper {
     @Override
     public List<Task> getAll() {
         return create().selectFrom(Tables.TASK).fetch().into(Task.class);
+        //return null;
     }
 
     private DSLContext create() {
