@@ -9,6 +9,7 @@ import play.api.mvc.{SimpleResult, RequestHeader}
 import java.io.File
 import org.jooq.util.GenerationTool
 import org.jooq.util.jaxb.{Target, Database, Generator}
+import play.api.mvc.Result
 
 object Count {
   var amount=0
@@ -43,7 +44,7 @@ class JooqPlugin(val app: Application) extends Plugin with HandleWebCommandSuppo
     }
   }
 
-  def handleWebCommand(request: RequestHeader, sbtLink: SBTLink, path: File): Option[SimpleResult] = {
+  def handleWebCommand(request: RequestHeader, buildLink: play.core.BuildLink, path: File): Option[Result] = {
 
     val applyGeneration = """/@jooq/generate""".r
 
@@ -59,7 +60,7 @@ class JooqPlugin(val app: Application) extends Plugin with HandleWebCommandSuppo
             }
           }
 
-          sbtLink.forceReload()
+          buildLink.forceReload()
           play.api.mvc.Results.Redirect(redirectUrl)
         }
       }
