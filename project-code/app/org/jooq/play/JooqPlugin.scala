@@ -5,7 +5,7 @@ import play.core._
 import play.api._
 
 import db.{DBApi, DBPlugin}
-import play.api.mvc.{SimpleResult, RequestHeader}
+import play.api.mvc.{Result, RequestHeader}
 import java.io.File
 import org.jooq.util.GenerationTool
 import org.jooq.util.jaxb.{Target, Database, Generator}
@@ -43,7 +43,7 @@ class JooqPlugin(val app: Application) extends Plugin with HandleWebCommandSuppo
     }
   }
 
-  def handleWebCommand(request: RequestHeader, sbtLink: SBTLink, path: File): Option[SimpleResult] = {
+  def handleWebCommand(request: RequestHeader, sbtLink: BuildLink, path: File): Option[Result] = {
 
     val applyGeneration = """/@jooq/generate""".r
 
