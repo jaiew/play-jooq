@@ -5,7 +5,8 @@ package models;
 import org.jooq.ConnectionProvider;
 import org.jooq.exception.DataAccessException;
 import play.Logger;
-import play.db.DB;
+import play.api.Play;
+import play.api.db.DB;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,7 +21,7 @@ public class PlayConnectionProvider implements ConnectionProvider {
     @Override
     public Connection acquire() throws DataAccessException {
         if (connection == null) {
-            connection = DB.getConnection();
+            connection = DB.getConnection("default", true, Play.current());
         }
         return connection;
     }

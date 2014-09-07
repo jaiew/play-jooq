@@ -1,4 +1,4 @@
-# JOOQ Play 2.1 Module
+# JOOQ Play 2.3 Module
 
 This project provides a very simple Play plugin that will invoke the JOOQ generation for a database.
 The plugin will be invoked on startup of a Play app but will not be executed in Prod mode.
