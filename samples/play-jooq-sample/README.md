@@ -5,15 +5,15 @@ It's using Guice to inject the correct implementation of a helper that executes 
 
 To run the h2 version simple do:
 
-    > play
+    > activator
     [play-jooq-sample] $ run
 
 To run the mysql version you can either run it in Dev mode with the following:
 
-    > play 
+    > activator
     [play-jooq-sample] $ run -Dconfig.file=conf/application.mysql.conf
 
 Or run it in Production mode with
 
-    > play
+    > activator
     [play-jooq-sample] $ start -Dconfig.file=conf/application.mysql.conf
