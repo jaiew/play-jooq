@@ -15,24 +15,15 @@ import java.sql.SQLException;
  */
 public class PlayConnectionProvider implements ConnectionProvider {
 
-    private Connection connection = null;
-
     @Override
     public Connection acquire() throws DataAccessException {
-        if (connection == null) {
-            connection = DB.getConnection();
-        }
-        return connection;
+        return DB.getConnection();
     }
 
     @Override
-    public void release(Connection released) throws DataAccessException {
-        if (this.connection != released) {
-            throw new IllegalArgumentException("Expected " + this.connection + " but got " + released);
-        }
+    public void release(Connection connection) throws DataAccessException {
         try {
             connection.close();
-            connection = null;
         } catch (SQLException e) {
             Logger.error("Error closing connection " + connection, e);
         }
